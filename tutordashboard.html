@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tutor Dashboard</title>
+    <link rel="stylesheet" href="../css/tutor.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        padding-top: 5rem;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000; 
+      }
+
+      nav {
+        background-color: #333;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+      }
+
+      nav a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background-color: #575757;
+      }
+
+      main {
+        margin-left: 220px;
+        padding: 2rem;
+      }
+
+      .card {
+        background: white;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .request-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .request-item button {
+        margin-left: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .accept-btn {
+        background-color: #4caf50;
+        color: white;
+      }
+      .reject-btn {
+        background-color: #f44336;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Tutor Dashboard</header>
+    <nav>
+      <a href="#" id="dashboard">Dashboard</a>
+      <a href="#" id="viewrequest">View Requests</a>
+      <a href="#" id="availability">Set Availability</a>
+      <a href="#" id="lectures">My Lectures</a>
+    </nav>
+    <main>
+      <div class="card">
+        <h2>Welcome back, Tutor!</h2>
+        <p>You have 2 upcoming sessions.</p>
+        <p>Total lectures for the day: 3</p>
+      </div>
+
+      <div class="card">
+        <h3>Next Session</h3>
+        <p>Math with John Doe z-index Aug 2, 4:00 PM</p>
+      </div>
+
+      <div class="card">
+        <h3>Availability</h3>
+        <p>Your available hours are currently set to 9:00 AM - 5:00 PM.</p>
+        <a href="availability.html">Edit your availability</a>
+      </div>
+    </main>
+    <script>
+        document.getElementById("viewrequest").addEventListener("click",function(e){
+            e.preventDefault();
+            window.location.href = "viewrequest.html";
+        })
+        document.getElementById("availability").addEventListener("click",function(e){
+            e.preventDefault();
+            window.location.href = "seatavailable.html";
+        })
+        document.getElementById("lectures").addEventListener("click", function(e){
+            e.preventDefault();
+            window.location.href = "mylecture.html";
+        })
+    </script>
+  </body>
+</html>

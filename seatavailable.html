@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Availability</title>
+    <style>
+      /* Basic styling to match the dashboard layout */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        padding-top: 5rem;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      nav {
+        background-color: #333;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+      }
+
+      nav a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background-color: #575757;
+      }
+
+      main {
+        margin-left: 220px;
+        padding: 2rem;
+      }
+
+      .card {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #4caf50;
+        margin-top: 0;
+      }
+
+      .availability-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      .day-card {
+        background-color: #f4f4f4;
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+      }
+      
+      .day-card h4 {
+          margin-top: 0;
+          color: #333;
+      }
+
+      .time-input {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .time-input label {
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      .time-input input[type="time"] {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .submit-btn {
+        grid-column: 1 / -1;
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Tutor Dashboard</header>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="view-requests.html">View Requests</a>
+      <a href="availability.html">Set Availability</a>
+      <a href="my-lectures.html">My Lectures</a>
+    </nav>
+    <main>
+      <div class="card">
+        <h2>Set Your Availability</h2>
+        <form class="availability-form">
+          <div class="day-card">
+            <h4>Monday</h4>
+            <div class="time-input">
+              <label for="mon-start">Start Time:</label>
+              <input type="time" id="mon-start" name="mon-start" />
+            </div>
+            <div class="time-input">
+              <label for="mon-end">End Time:</label>
+              <input type="time" id="mon-end" name="mon-end" />
+            </div>
+          </div>
+
+          <div class="day-card">
+            <h4>Tuesday</h4>
+            <div class="time-input">
+              <label for="tue-start">Start Time:</label>
+              <input type="time" id="tue-start" name="tue-start" />
+            </div>
+            <div class="time-input">
+              <label for="tue-end">End Time:</label>
+              <input type="time" id="tue-end" name="tue-end" />
+            </div>
+          </div>
+
+          <div class="day-card">
+            <h4>Wednesday</h4>
+            <div class="time-input">
+              <label for="wed-start">Start Time:</label>
+              <input type="time" id="wed-start" name="wed-start" />
+            </div>
+            <div class="time-input">
+              <label for="wed-end">End Time:</label>
+              <input type="time" id="wed-end" name="wed-end" />
+            </div>
+          </div>
+
+          <div class="day-card">
+            <h4>Thursday</h4>
+            <div class="time-input">
+              <label for="thu-start">Start Time:</label>
+              <input type="time" id="thu-start" name="thu-start" />
+            </div>
+            <div class="time-input">
+              <label for="thu-end">End Time:</label>
+              <input type="time" id="thu-end" name="thu-end" />
+            </div>
+          </div>
+
+          <div class="day-card">
+            <h4>Friday</h4>
+            <div class="time-input">
+              <label for="fri-start">Start Time:</label>
+              <input type="time" id="fri-start" name="fri-start" />
+            </div>
+            <div class="time-input">
+              <label for="fri-end">End Time:</label>
+              <input type="time" id="fri-end" name="fri-end" />
+            </div>
+          </div>
+
+          <div class="day-card">
+            <h4>Saturday</h4>
+            <div class="time-input">
+              <label for="sat-start">Start Time:</label>
+              <input type="time" id="sat-start" name="sat-start" />
+            </div>
+            <div class="time-input">
+              <label for="sat-end">End Time:</label>
+              <input type="time" id="sat-end" name="sat-end" />
+            </div>
+          </div>
+
+          <div class="day-card">
+            <h4>Sunday</h4>
+            <div class="time-input">
+              <label for="sun-start">Start Time:</label>
+              <input type="time" id="sun-start" name="sun-start" />
+            </div>
+            <div class="time-input">
+              <label for="sun-end">End Time:</label>
+              <input type="time" id="sun-end" name="sun-end" />
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">Save Availability</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

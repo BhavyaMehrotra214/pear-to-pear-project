@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Session Requests</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        padding-top: 5rem; 
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        position: fixed; 
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      nav {
+        background-color: #333;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 60px;
+      }
+
+      nav a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background-color: #575757;
+      }
+
+      main {
+        margin-left: 220px;
+        padding: 2rem;
+      }
+
+      .card {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        color: #4caf50;
+        margin-top: 0;
+      }
+
+      .request-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .request-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .request-info {
+        flex-grow: 1;
+      }
+
+      .request-info h4 {
+        margin: 0 0 0.5rem 0;
+        color: #555;
+      }
+
+      .request-info p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      .request-actions {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .accept-btn, .reject-btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .accept-btn {
+        background-color: #4caf50;
+      }
+
+      .accept-btn:hover {
+        background-color: #45a049;
+      }
+
+      .reject-btn {
+        background-color: #f44336;
+      }
+
+      .reject-btn:hover {
+        background-color: #da190b;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Tutor Dashboard</header>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="view-requests.html">View Requests</a>
+      <a href="availability.html">Set Availability</a>
+      <a href="my-lectures.html">My Lectures</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
+    <main>
+      <div class="card">
+        <h2>Incoming Session Requests</h2>
+        <ul class="request-list">
+          <li class="request-item">
+            <div class="request-info">
+              <h4>Session Request from Jane Smith</h4>
+              <p>Subject: English</p>
+              <p>Date: August 5, 2025</p>
+              <p>Time: 3:00 PM - 4:00 PM</p>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="reject-btn">Reject</button>
+            </div>
+          </li>
+          <li class="request-item">
+            <div class="request-info">
+              <h4>Session Request from Bob Johnson</h4>
+              <p>Subject: Physics</p>
+              <p>Date: August 6, 2025</p>
+              <p>Time: 11:00 AM - 12:00 PM</p>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="reject-btn">Reject</button>
+            </div>
+          </li>
+          <li class="request-item">
+            <div class="request-info">
+              <h4>Session Request from Sarah Lee</h4>
+              <p>Subject: Chemistry</p>
+              <p>Date: August 7, 2025</p>
+              <p>Time: 1:00 PM - 2:00 PM</p>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="reject-btn">Reject</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
